@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		9D6A8C941C9934A800F309AB /* eplD3Ns.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9D6A8C931C9934A800F309AB /* eplD3Ns.jpg */; };
 		9D6A8C9A1C9A5ED700F309AB /* screen 1.png in Resources */ = {isa = PBXBuildFile; fileRef = 9D6A8C991C9A5ED700F309AB /* screen 1.png */; };
 		9D6A8C9C1C9A5EE400F309AB /* sign in with fb transparent.png in Resources */ = {isa = PBXBuildFile; fileRef = 9D6A8C9B1C9A5EE400F309AB /* sign in with fb transparent.png */; };
 		D80B559E1C89675800E074A2 /* ParseUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D80B559D1C89675800E074A2 /* ParseUI.framework */; };
@@ -39,7 +38,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		9D6A8C931C9934A800F309AB /* eplD3Ns.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = eplD3Ns.jpg; path = ../../../Downloads/eplD3Ns.jpg; sourceTree = "<group>"; };
 		9D6A8C991C9A5ED700F309AB /* screen 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "screen 1.png"; sourceTree = "<group>"; };
 		9D6A8C9B1C9A5EE400F309AB /* sign in with fb transparent.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sign in with fb transparent.png"; sourceTree = "<group>"; };
 		D80B559D1C89675800E074A2 /* ParseUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseUI.framework; sourceTree = "<group>"; };
@@ -145,7 +143,6 @@
 				D885864C1C75E62700F01190 /* Assets.xcassets */,
 				9D6A8C9B1C9A5EE400F309AB /* sign in with fb transparent.png */,
 				9D6A8C991C9A5ED700F309AB /* screen 1.png */,
-				9D6A8C931C9934A800F309AB /* eplD3Ns.jpg */,
 				D885864E1C75E62700F01190 /* LaunchScreen.storyboard */,
 				D88586511C75E62700F01190 /* Info.plist */,
 				D88586491C75E62700F01190 /* facebook_login.xcdatamodeld */,
@@ -218,7 +215,6 @@
 				D885864D1C75E62700F01190 /* Assets.xcassets in Resources */,
 				D88586481C75E62700F01190 /* Main.storyboard in Resources */,
 				9D6A8C9C1C9A5EE400F309AB /* sign in with fb transparent.png in Resources */,
-				9D6A8C941C9934A800F309AB /* eplD3Ns.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
