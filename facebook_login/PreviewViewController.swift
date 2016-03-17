@@ -20,6 +20,7 @@ class PreviewViewController: UIViewController, UIScrollViewDelegate {
     
     
     override func viewDidLoad() {
+        print("hello its me")
         super.viewDidLoad()
         
         self.title = self.titleString

@@ -13,9 +13,17 @@ import Foundation
 
 
 class ViewController: UIViewController {
-    
+    let bgImage = UIImage(named: "screen 1.png")
+    var imageView: UIImageView!
     
     override func viewDidLoad() {
+        imageView = UIImageView(frame: view.bounds)
+        imageView.contentMode = .ScaleAspectFill
+        imageView.clipsToBounds = true
+        imageView.image = bgImage
+        imageView.center = view.center
+        view.addSubview(imageView)
+        self.view.sendSubviewToBack(imageView)
         super.viewDidLoad()
     }
     
