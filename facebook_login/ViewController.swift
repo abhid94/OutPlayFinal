@@ -31,6 +31,8 @@ class ViewController: UIViewController {
         
         facebookLogin()
         
+        
+        
     }
 
     
@@ -45,9 +47,10 @@ class ViewController: UIViewController {
             if let user = user {
                 if user.isNew {
                     print("User signed up and logged in through Facebook!")
+                    self.goToDisplayUsers()
                 } else {
                     print("User logged in through Facebook!")
-//                    self.performSegueWithIdentifier("displayUsers", sender: self )
+                    self.goToDisplayUsers()
                     
                 }
             } else {
@@ -106,8 +109,12 @@ class ViewController: UIViewController {
                 
             }
             
-        }
+        } 
         
+    }
+    
+    func goToDisplayUsers () {
+       self.performSegueWithIdentifier("showUsers", sender:nil);
         
     }
     
