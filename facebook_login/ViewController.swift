@@ -70,15 +70,16 @@ class ViewController: UIViewController {
                 
                 (connection, result, error) in
                 
+                
                 if error != nil {
                     // Some error checking here
                     
                 }
                 else if(result != nil) {
-                    let userFirstName:String? = result["first_name"] as? String
-                    let userLastName:String? = result["last_name"] as? String
-                    let userEmail:String? = result["email"] as? String
-                    let userId:String = result["id"] as! String
+                    let userFirstName:String? = (result as! NSDictionary)["first_name"] as? String
+                    let userLastName:String? = (result as! NSDictionary)["last_name"] as? String
+                    let userEmail:String? = (result as! NSDictionary)["email"] as? String
+                    let userId:String = (result as! NSDictionary)["id"] as! String
                     let myUser:PFUser = PFUser.currentUser()!
                     myUser.setObject(userFirstName!, forKey: "first_name")
                     myUser.setObject(userLastName!, forKey: "last_name")
