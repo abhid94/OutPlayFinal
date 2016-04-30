@@ -16,7 +16,7 @@ class PreviewViewController: UIViewController, UIScrollViewDelegate {
     @IBOutlet weak var imageView: UIImageView!
     
     var titleString: String!
-    var imageFile: PFFile!
+   // var imageFile: PFFile!
     
     
     override func viewDidLoad() {
@@ -24,19 +24,19 @@ class PreviewViewController: UIViewController, UIScrollViewDelegate {
         
         self.title = self.titleString
         
-        self.imageFile.getDataInBackgroundWithBlock { (imageData, error) -> Void in
+        //self.imageFile.getDataInBackgroundWithBlock { (imageData, error) -> Void in
             
-            if error == nil {
+           // if error == nil {
                 
-                if let imageData = imageData {
+              //  if let imageData = imageData {
                     
-                    let image = UIImage(data: imageData)
-                    self.imageView.image = image
+               //     let image = UIImage(data: imageData)
+               //     self.imageView.image = image
                     
-                }
+                //}
                 
-            }
-        }
+            //}
+       // }
         
 
         // Do any additional setup after loading the view.

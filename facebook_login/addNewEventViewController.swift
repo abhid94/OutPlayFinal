@@ -21,6 +21,7 @@ class addNewEventViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+
         // Do any additional setup after loading the view.
     }
 
@@ -78,6 +79,8 @@ class addNewEventViewController: UIViewController {
             (success: Bool, error: NSError?) -> Void in
             
         }
+        //self.performSegueWithIdentifier("doneSegue", sender:nil);
+        navigationController?.popViewControllerAnimated(true)
     }
     /*
     func getDate(date:UIDatePicker){
@@ -91,5 +94,15 @@ class addNewEventViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+    
+    func hideKeyboardWhenTappedAround() {
+    let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
+    view.addGestureRecognizer(tap)
+    }
+    
+    func dismissKeyboard() {
+        view.endEditing(true)
+    }
+    
+    
 }

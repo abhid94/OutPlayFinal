@@ -12,12 +12,14 @@ import ParseUI
 
 class displayUsersViewController: PFQueryTableViewController {
 
-    
+    //private let cell = UITableView(frame: CGrect(x: 10, ))
     
     override func viewDidLoad()
     {
         super.viewDidLoad()
-        
+        self.queryForTable()
+        navigationController!.navigationBar.barTintColor = UIColor.blackColor()
+        navigationController!.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor()]
     }
     
     
@@ -80,13 +82,13 @@ class displayUsersViewController: PFQueryTableViewController {
         
         
         if indexPath.row + 1 > self.objects?.count {
-            
+            print("next page")
             self.loadNextPage()
             tableView.deselectRowAtIndexPath(indexPath, animated: true)
             
         } else {
-            
-            self.performSegueWithIdentifier("showDetail", sender: self)
+            print("showdetail")
+            self.performSegueWithIdentifier("showDetails", sender: self)
             
         }
         
@@ -102,15 +104,15 @@ class displayUsersViewController: PFQueryTableViewController {
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         
-        if segue.identifier == "showDetail" {
+        if segue.identifier == "showDetails" {
             
             let indexPath = self.tableView.indexPathForSelectedRow
             let detailVC = segue.destinationViewController as! PreviewViewController
             
             let object = self.objectAtIndexPath(indexPath)
             
-            detailVC.titleString = object?.objectForKey("first_name") as! String
-            detailVC.imageFile  = object?.objectForKey("profile_picture") as! PFFile
+            detailVC.titleString = object?.objectForKey("Sport") as! String
+           // detailVC.imageFile  = object?.objectForKey("profile_picture") as! PFFile
             
             self.tableView.deselectRowAtIndexPath(indexPath!, animated: true)
             

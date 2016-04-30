@@ -27,6 +27,7 @@ class ViewController: UIViewController {
         view.addSubview(imageView)
         self.view.sendSubviewToBack(imageView)
         super.viewDidLoad()
+        
     }
     
   

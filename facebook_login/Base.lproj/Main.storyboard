@@ -57,11 +57,38 @@
             </objects>
             <point key="canvasLocation" x="1594" y="241"/>
         </scene>
+        <!--Preview View Controller-->
+        <scene sceneID="Fh8-wn-A5L">
+            <objects>
+                <viewController id="zDc-Xk-uwQ" customClass="PreviewViewController" customModule="OutPlay" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Ctj-Il-g09"/>
+                        <viewControllerLayoutGuide type="bottom" id="A8j-Uj-dMr"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="0TJ-aq-AZb">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="acf-google-maps-field-2.png" translatesAutoresizingMaskIntoConstraints="NO" id="exw-l0-uw1">
+                                <rect key="frame" x="0.0" y="417" width="600" height="139"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="exw-l0-uw1" firstAttribute="centerX" secondItem="0TJ-aq-AZb" secondAttribute="centerX" id="9ay-MS-Nqx"/>
+                            <constraint firstItem="exw-l0-uw1" firstAttribute="centerX" secondItem="0TJ-aq-AZb" secondAttribute="centerX" id="Ihb-sO-KiB"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kc3-Yh-OeK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3396" y="-482"/>
+        </scene>
         <!--OutPlay-->
         <scene sceneID="aWE-ZZ-fpb">
             <objects>
                 <tableViewController storyboardIdentifier="displayUsers" modalTransitionStyle="flipHorizontal" useStoryboardIdentifierAsRestorationIdentifier="YES" id="eS6-bl-xe7" customClass="displayUsersViewController" customModule="OutPlay" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="200" sectionHeaderHeight="28" sectionFooterHeight="28" id="7Bx-vG-be9">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="170" sectionHeaderHeight="28" sectionFooterHeight="28" id="7Bx-vG-be9">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.54576614765663345" green="0.53801683830696512" blue="0.5717850130890052" alpha="1" colorSpace="calibratedRGB"/>
@@ -69,17 +96,20 @@
                         <color key="sectionIndexBackgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="LhO-NG-1zZ" customClass="BaseTableViewCell" customModule="OutPlay" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="92" width="600" height="200"/>
+                                <rect key="frame" x="0.0" y="28" width="600" height="170"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="LhO-NG-1zZ" id="mQS-tv-FB7">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="199"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="169"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="4603932524.png" translatesAutoresizingMaskIntoConstraints="NO" id="9qd-l6-3sA">
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="plain_white_background_211387.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="9qd-l6-3sA">
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="199"/>
                                             <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="167" id="5QP-up-KB4"/>
+                                            </constraints>
                                         </imageView>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qzt-bh-z3L" customClass="PFImageView">
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qzt-bh-z3L" customClass="PFImageView">
                                             <rect key="frame" x="33" y="48" width="130" height="121"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="100" id="Hll-JH-X6n"/>
@@ -87,37 +117,38 @@
                                             </constraints>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MUA-Ee-8jy">
-                                            <rect key="frame" x="362" y="69" width="66" height="21"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <rect key="frame" x="325" y="69" width="103" height="21"/>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="14"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cTl-jG-Obu">
-                                            <rect key="frame" x="377" y="98" width="36" height="21"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Sport Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BiP-fV-JQT">
-                                            <rect key="frame" x="350" y="34" width="89" height="21"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <rect key="frame" x="325" y="98" width="88" height="21"/>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="14"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wMM-67-seH">
-                                            <rect key="frame" x="377" y="127" width="38" height="21"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <rect key="frame" x="325" y="127" width="90" height="21"/>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="14"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Sport Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BiP-fV-JQT">
+                                            <rect key="frame" x="325" y="40" width="141" height="21"/>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="22"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
-                                    <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                     <constraints>
-                                        <constraint firstAttribute="trailingMargin" secondItem="BiP-fV-JQT" secondAttribute="trailing" constant="10" id="3OS-jU-cnL"/>
                                         <constraint firstItem="qzt-bh-z3L" firstAttribute="leading" secondItem="mQS-tv-FB7" secondAttribute="leadingMargin" constant="20" id="FMs-4G-f1J"/>
-                                        <constraint firstAttribute="trailingMargin" secondItem="cTl-jG-Obu" secondAttribute="trailing" constant="10" id="UxE-Ec-JK1"/>
-                                        <constraint firstAttribute="trailingMargin" secondItem="MUA-Ee-8jy" secondAttribute="trailing" constant="10" id="bOD-vx-0NB"/>
-                                        <constraint firstAttribute="trailingMargin" secondItem="wMM-67-seH" secondAttribute="trailing" constant="10" id="cPd-tp-4Og"/>
+                                        <constraint firstItem="cTl-jG-Obu" firstAttribute="centerX" secondItem="mQS-tv-FB7" secondAttribute="centerX" constant="70" id="T1H-JG-TVi"/>
+                                        <constraint firstItem="MUA-Ee-8jy" firstAttribute="centerX" secondItem="mQS-tv-FB7" secondAttribute="centerX" constant="70" id="UBL-ui-2wS"/>
+                                        <constraint firstItem="qzt-bh-z3L" firstAttribute="centerY" secondItem="mQS-tv-FB7" secondAttribute="centerY" id="fFc-yq-Msf"/>
+                                        <constraint firstItem="BiP-fV-JQT" firstAttribute="centerX" secondItem="mQS-tv-FB7" secondAttribute="centerX" constant="70" id="fxo-0m-6Tc"/>
+                                        <constraint firstItem="wMM-67-seH" firstAttribute="centerX" secondItem="mQS-tv-FB7" secondAttribute="centerX" constant="70" id="lde-iV-zd9"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
@@ -141,7 +172,9 @@
                                 <rect key="frame" x="447" y="7" width="133" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="32"/>
-                                <state key="normal" title="+"/>
+                                <state key="normal" title="+">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
                                 <connections>
                                     <action selector="addEventSeque:" destination="eS6-bl-xe7" eventType="touchUpInside" id="Icx-kj-0N6"/>
                                 </connections>
@@ -156,6 +189,7 @@
                     </userDefinedRuntimeAttributes>
                     <connections>
                         <segue destination="a5D-JH-Ayx" kind="show" identifier="createEventSeque" id="8zJ-yy-BE2"/>
+                        <segue destination="zDc-Xk-uwQ" kind="show" identifier="showDetails" id="7AS-Er-9sM"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lls-lE-vK5" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -217,6 +251,7 @@
                         <outlet property="location" destination="2cd-mz-NiX" id="dFv-SP-dMb"/>
                         <outlet property="sportName" destination="aXr-Wc-rdr" id="u6q-CF-LOu"/>
                         <outlet property="time" destination="Wnl-HQ-Ft4" id="k80-rz-qcm"/>
+                        <segue destination="eS6-bl-xe7" kind="show" identifier="doneSegue" id="ebt-QC-cdB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xil-iM-MB2" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -302,7 +337,11 @@
         </scene>
     </scenes>
     <resources>
-        <image name="4603932524.png" width="797" height="600"/>
+        <image name="acf-google-maps-field-2.png" width="717" height="345"/>
+        <image name="plain_white_background_211387.jpg" width="425" height="283"/>
         <image name="sign in with fb transparent.png" width="495" height="115"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="ebt-QC-cdB"/>
+    </inferredMetricsTieBreakers>
 </document>
