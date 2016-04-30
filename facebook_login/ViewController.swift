@@ -17,6 +17,8 @@ class ViewController: UIViewController {
     var imageView: UIImageView!
     
     override func viewDidLoad() {
+        super.viewDidLoad()
+        self.navigationController?.navigationBarHidden = true
         imageView = UIImageView(frame: view.bounds)
         imageView.contentMode = .ScaleAspectFill
         imageView.clipsToBounds = true
@@ -26,6 +28,8 @@ class ViewController: UIViewController {
         self.view.sendSubviewToBack(imageView)
         super.viewDidLoad()
     }
+    
+  
     
     @IBAction func login_button(sender: AnyObject) {
         
