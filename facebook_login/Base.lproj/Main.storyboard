@@ -50,14 +50,14 @@
                     <navigationItem key="navigationItem" id="Z9M-GS-NZ8"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <segue destination="eS6-bl-xe7" kind="show" identifier="showUsers" id="a29-jI-Yv0"/>
+                        <segue destination="C7I-Iy-p5n" kind="show" identifier="showUsers" id="a29-jI-Yv0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1594" y="241"/>
         </scene>
-        <!--Display Users View Controller-->
+        <!--OutPlay-->
         <scene sceneID="aWE-ZZ-fpb">
             <objects>
                 <tableViewController storyboardIdentifier="displayUsers" useStoryboardIdentifierAsRestorationIdentifier="YES" id="eS6-bl-xe7" customClass="displayUsersViewController" customModule="OutPlay" customModuleProvider="target" sceneMemberID="viewController">
@@ -67,10 +67,10 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="LhO-NG-1zZ" customClass="BaseTableViewCell" customModule="OutPlay" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="600" height="200"/>
+                                <rect key="frame" x="0.0" y="92" width="600" height="200"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="LhO-NG-1zZ" id="mQS-tv-FB7">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="199"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="199.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Find a Player" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Etk-Ml-Srp">
@@ -103,17 +103,92 @@
                             <outlet property="delegate" destination="eS6-bl-xe7" id="7xa-qw-Pic"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="jHQ-O1-NJr"/>
+                    <navigationItem key="navigationItem" title="OutPlay" id="jHQ-O1-NJr">
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="3e7-nV-E2w">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="3Xu-Fo-sL0">
+                                <rect key="frame" x="447" y="7" width="133" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Add Event"/>
+                                <connections>
+                                    <action selector="addEventSeque:" destination="eS6-bl-xe7" eventType="touchUpInside" id="Icx-kj-0N6"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="string" keyPath="parseClassName" value=""/>
                         <userDefinedRuntimeAttribute type="number" keyPath="objectsPerPage">
                             <integer key="value" value="3"/>
                         </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
+                    <connections>
+                        <segue destination="a5D-JH-Ayx" kind="show" identifier="createEventSeque" id="8zJ-yy-BE2"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lls-lE-vK5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2465" y="241"/>
+            <point key="canvasLocation" x="3277" y="241"/>
+        </scene>
+        <!--Add Event-->
+        <scene sceneID="XGG-HC-HRo">
+            <objects>
+                <viewController id="a5D-JH-Ayx" customClass="addNewEventViewController" customModule="OutPlay" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Qml-Rr-KCr"/>
+                        <viewControllerLayoutGuide type="bottom" id="DhV-Za-4vS"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="67a-8V-odo">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Time" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Wnl-HQ-Ft4">
+                                <rect key="frame" x="87" y="387" width="426" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Location" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2cd-mz-NiX">
+                                <rect key="frame" x="87" y="433" width="426" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <datePicker contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="xJK-p3-Cat">
+                                <rect key="frame" x="0.0" y="113" width="600" height="216"/>
+                                <date key="date" timeIntervalSinceReferenceDate="483683309.40480697">
+                                    <!--2016-04-30 04:28:29 +0000-->
+                                </date>
+                            </datePicker>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Add Sport Here" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aXr-Wc-rdr">
+                                <rect key="frame" x="87" y="343" width="426" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Wnl-HQ-Ft4" firstAttribute="centerX" secondItem="67a-8V-odo" secondAttribute="centerX" id="7Th-cp-NH4"/>
+                            <constraint firstItem="xJK-p3-Cat" firstAttribute="top" secondItem="Qml-Rr-KCr" secondAttribute="bottom" id="VI5-Mw-7ft"/>
+                            <constraint firstItem="aXr-Wc-rdr" firstAttribute="centerX" secondItem="67a-8V-odo" secondAttribute="centerX" id="eJ9-EN-XPT"/>
+                            <constraint firstItem="xJK-p3-Cat" firstAttribute="centerX" secondItem="67a-8V-odo" secondAttribute="centerX" id="pyc-ix-F5i"/>
+                            <constraint firstItem="2cd-mz-NiX" firstAttribute="centerX" secondItem="67a-8V-odo" secondAttribute="centerX" id="yK4-4A-ndQ"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Add Event" id="IcO-Bp-GAy">
+                        <barButtonItem key="rightBarButtonItem" title="Done" id="yDi-kK-8bL">
+                            <connections>
+                                <action selector="doneButton:" destination="a5D-JH-Ayx" id="zPb-Xr-llV"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="date" destination="xJK-p3-Cat" id="EYn-4N-O9P"/>
+                        <outlet property="location" destination="2cd-mz-NiX" id="dFv-SP-dMb"/>
+                        <outlet property="sportName" destination="aXr-Wc-rdr" id="u6q-CF-LOu"/>
+                        <outlet property="time" destination="Wnl-HQ-Ft4" id="k80-rz-qcm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xil-iM-MB2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2553" y="-482"/>
         </scene>
         <!--Preview View Controller-->
         <scene sceneID="bZK-LW-7ZI">
@@ -172,7 +247,25 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fsb-WJ-ety" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3253" y="241"/>
+            <point key="canvasLocation" x="4561" y="309"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="feS-ld-tqa">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="C7I-Iy-p5n" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="h59-BG-k8b">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="eS6-bl-xe7" kind="relationship" relationship="rootViewController" id="1LA-qt-IK8"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DH9-kI-JPb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2553" y="241"/>
         </scene>
     </scenes>
     <resources>

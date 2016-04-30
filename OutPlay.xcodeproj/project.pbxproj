@@ -35,6 +35,7 @@
 		D88586741C75EEA500F01190 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D88586731C75EEA500F01190 /* SystemConfiguration.framework */; };
 		D88586761C75EEB800F01190 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = D88586751C75EEB800F01190 /* libz.tbd */; };
 		D88586781C75EED000F01190 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = D88586771C75EED000F01190 /* libsqlite3.tbd */; };
+		D8C428CC1CD45D1C0038E222 /* addNewEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8C428CB1CD45D1C0038E222 /* addNewEventViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -68,6 +69,7 @@
 		D88586731C75EEA500F01190 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		D88586751C75EEB800F01190 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		D88586771C75EED000F01190 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		D8C428CB1CD45D1C0038E222 /* addNewEventViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = addNewEventViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,6 +137,7 @@
 			isa = PBXGroup;
 			children = (
 				D88586421C75E62700F01190 /* AppDelegate.swift */,
+				D8C428CB1CD45D1C0038E222 /* addNewEventViewController.swift */,
 				D80B55A31C8973AF00E074A2 /* BaseTableViewCell.swift */,
 				D88586441C75E62700F01190 /* ViewController.swift */,
 				D80B559F1C89710000E074A2 /* displayUsersViewController.swift */,
@@ -230,6 +233,7 @@
 				D88586451C75E62700F01190 /* ViewController.swift in Sources */,
 				D80B55A41C8973AF00E074A2 /* BaseTableViewCell.swift in Sources */,
 				D88586431C75E62700F01190 /* AppDelegate.swift in Sources */,
+				D8C428CC1CD45D1C0038E222 /* addNewEventViewController.swift in Sources */,
 				D80B55A61C89A52400E074A2 /* PreviewViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
