@@ -66,6 +66,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.54576614765663345" green="0.53801683830696512" blue="0.5717850130890052" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="separatorColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <color key="sectionIndexBackgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="LhO-NG-1zZ" customClass="BaseTableViewCell" customModule="OutPlay" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="92" width="600" height="200"/>
@@ -74,6 +75,17 @@
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="199"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="4603932524.png" translatesAutoresizingMaskIntoConstraints="NO" id="9qd-l6-3sA">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="199"/>
+                                            <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                        </imageView>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qzt-bh-z3L" customClass="PFImageView">
+                                            <rect key="frame" x="33" y="48" width="130" height="121"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="100" id="Hll-JH-X6n"/>
+                                                <constraint firstAttribute="height" constant="100" id="LA1-8G-Hxk"/>
+                                            </constraints>
+                                        </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MUA-Ee-8jy">
                                             <rect key="frame" x="362" y="69" width="66" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -98,10 +110,8 @@
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qzt-bh-z3L" customClass="PFImageView">
-                                            <rect key="frame" x="33" y="48" width="130" height="121"/>
-                                        </imageView>
                                     </subviews>
+                                    <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                     <constraints>
                                         <constraint firstAttribute="trailingMargin" secondItem="BiP-fV-JQT" secondAttribute="trailing" constant="10" id="3OS-jU-cnL"/>
                                         <constraint firstItem="qzt-bh-z3L" firstAttribute="leading" secondItem="mQS-tv-FB7" secondAttribute="leadingMargin" constant="20" id="FMs-4G-f1J"/>
@@ -110,10 +120,12 @@
                                         <constraint firstAttribute="trailingMargin" secondItem="wMM-67-seH" secondAttribute="trailing" constant="10" id="cPd-tp-4Og"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
                                     <outlet property="Date" destination="cTl-jG-Obu" id="906-aP-cXD"/>
                                     <outlet property="Location" destination="MUA-Ee-8jy" id="QIP-ft-S6P"/>
                                     <outlet property="Sport" destination="BiP-fV-JQT" id="XVT-c0-3Rw"/>
+                                    <outlet property="cellBackground" destination="9qd-l6-3sA" id="xao-Ti-BIv"/>
                                     <outlet property="cellImageView" destination="qzt-bh-z3L" id="oFT-bt-pqM"/>
                                 </connections>
                             </tableViewCell>
@@ -125,10 +137,11 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="OutPlay" id="jHQ-O1-NJr">
                         <barButtonItem key="rightBarButtonItem" style="plain" id="3e7-nV-E2w">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="3Xu-Fo-sL0">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="3Xu-Fo-sL0">
                                 <rect key="frame" x="447" y="7" width="133" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Add Event"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                <state key="normal" title="+"/>
                                 <connections>
                                     <action selector="addEventSeque:" destination="eS6-bl-xe7" eventType="touchUpInside" id="Icx-kj-0N6"/>
                                 </connections>
@@ -289,6 +302,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="4603932524.png" width="797" height="600"/>
         <image name="sign in with fb transparent.png" width="495" height="115"/>
     </resources>
 </document>

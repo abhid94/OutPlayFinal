@@ -13,7 +13,7 @@ import Foundation
 
 
 class ViewController: UIViewController {
-    let bgImage = UIImage(named: "screen 1.png")
+    let bgImage = UIImage(named: "colour_screen.png")
     var imageView: UIImageView!
     
     override func viewDidLoad() {

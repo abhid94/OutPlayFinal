@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7C67F5841CD503970035B7C2 /* colour_screen.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C67F5831CD503970035B7C2 /* colour_screen.png */; };
+		7C67F5861CD509820035B7C2 /* hd_bg_blue_white_circle.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7C67F5851CD509820035B7C2 /* hd_bg_blue_white_circle.jpg */; };
+		7C67F5881CD50D690035B7C2 /* 4603932524.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C67F5871CD50D690035B7C2 /* 4603932524.png */; };
 		9D6A8C9A1C9A5ED700F309AB /* screen 1.png in Resources */ = {isa = PBXBuildFile; fileRef = 9D6A8C991C9A5ED700F309AB /* screen 1.png */; };
 		9D6A8C9C1C9A5EE400F309AB /* sign in with fb transparent.png in Resources */ = {isa = PBXBuildFile; fileRef = 9D6A8C9B1C9A5EE400F309AB /* sign in with fb transparent.png */; };
 		D80B559E1C89675800E074A2 /* ParseUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D80B559D1C89675800E074A2 /* ParseUI.framework */; };
@@ -39,6 +42,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7C67F5831CD503970035B7C2 /* colour_screen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = colour_screen.png; sourceTree = "<group>"; };
+		7C67F5851CD509820035B7C2 /* hd_bg_blue_white_circle.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = hd_bg_blue_white_circle.jpg; sourceTree = "<group>"; };
+		7C67F5871CD50D690035B7C2 /* 4603932524.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 4603932524.png; sourceTree = "<group>"; };
 		9D6A8C991C9A5ED700F309AB /* screen 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "screen 1.png"; sourceTree = "<group>"; };
 		9D6A8C9B1C9A5EE400F309AB /* sign in with fb transparent.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sign in with fb transparent.png"; sourceTree = "<group>"; };
 		D80B559D1C89675800E074A2 /* ParseUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseUI.framework; sourceTree = "<group>"; };
@@ -145,9 +151,12 @@
 				D88586461C75E62700F01190 /* Main.storyboard */,
 				D885864C1C75E62700F01190 /* Assets.xcassets */,
 				9D6A8C9B1C9A5EE400F309AB /* sign in with fb transparent.png */,
+				7C67F5831CD503970035B7C2 /* colour_screen.png */,
 				9D6A8C991C9A5ED700F309AB /* screen 1.png */,
 				D885864E1C75E62700F01190 /* LaunchScreen.storyboard */,
+				7C67F5871CD50D690035B7C2 /* 4603932524.png */,
 				D88586511C75E62700F01190 /* Info.plist */,
+				7C67F5851CD509820035B7C2 /* hd_bg_blue_white_circle.jpg */,
 				D88586491C75E62700F01190 /* facebook_login.xcdatamodeld */,
 			);
 			name = OutPlay;
@@ -217,7 +226,10 @@
 				D88586501C75E62700F01190 /* LaunchScreen.storyboard in Resources */,
 				D885864D1C75E62700F01190 /* Assets.xcassets in Resources */,
 				D88586481C75E62700F01190 /* Main.storyboard in Resources */,
+				7C67F5841CD503970035B7C2 /* colour_screen.png in Resources */,
 				9D6A8C9C1C9A5EE400F309AB /* sign in with fb transparent.png in Resources */,
+				7C67F5861CD509820035B7C2 /* hd_bg_blue_white_circle.jpg in Resources */,
+				7C67F5881CD50D690035B7C2 /* 4603932524.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

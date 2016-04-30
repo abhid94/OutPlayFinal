@@ -19,5 +19,6 @@ class BaseTableViewCell: PFTableViewCell {
     @IBOutlet weak var Location: UILabel!
     
     @IBOutlet weak var Date: UILabel!
+    @IBOutlet weak var cellBackground: UIImageView!
     
 }

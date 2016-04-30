@@ -43,18 +43,21 @@ class displayUsersViewController: PFQueryTableViewController {
         //cell.titleLabel.text = object?.objectForKey("Location") as? String
     
         let imageFile = object?.objectForKey("Organiser_Pic") as? PFFile
+        //let imageBackground = "hd_bg_blue_white_circle.jpg"
         
-        
+        //cell.cellBackground.image = UIImage(named: "hd_bg_blue_white_circle.jpg")
         cell.cellImageView.image = UIImage(named: "placeholder")
-        cell.Location.text = object?.objectForKey("Location") as! String
-        cell.Sport.text = object?.objectForKey("Sport") as! String
+        cell.Location.text = object?.objectForKey("Location") as? String
+        cell.Sport.text = object?.objectForKey("Sport") as? String
         let dateFormatter = NSDateFormatter()
         dateFormatter.dateFormat = "yyyy-MM-dd HH:mm"
         let dateString = dateFormatter.stringFromDate((object?.objectForKey("Date"))! as! NSDate)
         cell.Date.text = dateString
         //cell.Date.text = object?.objectForKey("Date") as! String
         cell.cellImageView.file = imageFile
+        //cell.cellBackground.file = imageBackground
         cell.cellImageView.loadInBackground()
+        //cell.cellBackground.loadInBackground();
         
         return cell
         
