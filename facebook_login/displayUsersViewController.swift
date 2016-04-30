@@ -112,7 +112,13 @@ class displayUsersViewController: PFQueryTableViewController {
             let object = self.objectAtIndexPath(indexPath)
             
             detailVC.titleString = object?.objectForKey("Sport") as! String
-           // detailVC.imageFile  = object?.objectForKey("profile_picture") as! PFFile
+            detailVC.locationString = object?.objectForKey("Location") as! String
+            //detailVC.organiser_pic = object?.objectForKey("Organiser_Pic") as! UIImage
+            let dateFormatter = NSDateFormatter()
+            dateFormatter.dateFormat = "yyyy-MM-dd HH:mm"
+            let dateString = dateFormatter.stringFromDate((object?.objectForKey("Date"))! as! NSDate)
+            detailVC.date = dateString
+            detailVC.organiser_pic  = object?.objectForKey("Organiser_Pic") as! PFFile
             
             self.tableView.deselectRowAtIndexPath(indexPath!, animated: true)
             

@@ -18,11 +18,28 @@ class addNewEventViewController: UIViewController {
     
     @IBOutlet weak var location: UITextField!
     
+    @IBOutlet weak var profile_pic: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        
+        //Looks for single or multiple taps.
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
+        view.addGestureRecognizer(tap)
+        
+        
+        print(PFUser.currentUser()!.objectId!)
+        let userPicture = PFUser.currentUser()?["profile_picture"] as? PFFile
+        
+            userPicture!.getDataInBackgroundWithBlock { (imageData: NSData?, error: NSError?) -> Void in
+                if (error == nil) {
+                    self.profile_pic.image = UIImage(data:imageData!)
+                    //self.profile_pic.image = UIImage(named: "screen 1.png")
+                }
+            }
+        
+        //self.profile_pic.image = UIImage(named: "screen 1.png")
 
-        // Do any additional setup after loading the view.
     }
 
     /*
@@ -95,14 +112,18 @@ class addNewEventViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    func hideKeyboardWhenTappedAround() {
-    let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
-    view.addGestureRecognizer(tap)
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        self.view.endEditing(true)
+        return false
     }
     
+    //Calls this function when the tap is recognized.
     func dismissKeyboard() {
-        view.endEditing(true)
+        
     }
+    
+   
+    
     
     
 }

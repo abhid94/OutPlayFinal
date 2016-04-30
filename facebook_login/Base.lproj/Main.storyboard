@@ -72,13 +72,41 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="acf-google-maps-field-2.png" translatesAutoresizingMaskIntoConstraints="NO" id="exw-l0-uw1">
                                 <rect key="frame" x="0.0" y="417" width="600" height="139"/>
                             </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1I9-pL-ORy">
+                                <rect key="frame" x="139" y="98" width="240" height="128"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qDt-MJ-Ug6">
+                                <rect key="frame" x="148" y="285" width="222" height="40"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZPy-nm-0ON">
+                                <rect key="frame" x="182" y="339" width="154" height="32"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="exw-l0-uw1" firstAttribute="centerX" secondItem="0TJ-aq-AZb" secondAttribute="centerX" id="9ay-MS-Nqx"/>
                             <constraint firstItem="exw-l0-uw1" firstAttribute="centerX" secondItem="0TJ-aq-AZb" secondAttribute="centerX" id="Ihb-sO-KiB"/>
+                            <constraint firstItem="1I9-pL-ORy" firstAttribute="top" secondItem="Ctj-Il-g09" secondAttribute="bottom" constant="40" id="XGk-yp-pML"/>
+                            <constraint firstItem="exw-l0-uw1" firstAttribute="top" secondItem="ZPy-nm-0ON" secondAttribute="bottom" constant="20" id="c1K-6t-786"/>
+                            <constraint firstItem="qDt-MJ-Ug6" firstAttribute="top" secondItem="1I9-pL-ORy" secondAttribute="bottom" constant="40" id="cbH-Vj-koa"/>
+                            <constraint firstItem="ZPy-nm-0ON" firstAttribute="centerX" secondItem="0TJ-aq-AZb" secondAttribute="centerX" id="eNQ-jv-lTe"/>
+                            <constraint firstItem="qDt-MJ-Ug6" firstAttribute="centerX" secondItem="0TJ-aq-AZb" secondAttribute="centerX" id="k4n-X9-AKV"/>
+                            <constraint firstItem="1I9-pL-ORy" firstAttribute="centerX" secondItem="0TJ-aq-AZb" secondAttribute="centerX" id="paF-rh-dP2"/>
+                            <constraint firstItem="qDt-MJ-Ug6" firstAttribute="centerX" secondItem="0TJ-aq-AZb" secondAttribute="centerX" id="tfg-Yk-iBI"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="dateLabel" destination="ZPy-nm-0ON" id="zGq-Gl-Bbi"/>
+                        <outlet property="eventPic" destination="1I9-pL-ORy" id="rhy-cV-nZb"/>
+                        <outlet property="locationLabel" destination="qDt-MJ-Ug6" id="V9U-ur-Y43"/>
+                        <outlet property="organiserPic" destination="1I9-pL-ORy" id="jIV-R3-IKq"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kc3-Yh-OeK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -91,7 +119,7 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="170" sectionHeaderHeight="28" sectionFooterHeight="28" id="7Bx-vG-be9">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.54576614765663345" green="0.53801683830696512" blue="0.5717850130890052" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.78799901829999996" green="0.78799901829999996" blue="0.78799901829999996" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="separatorColor" cocoaTouchSystemColor="darkTextColor"/>
                         <color key="sectionIndexBackgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
@@ -208,33 +236,59 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Time" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Wnl-HQ-Ft4">
-                                <rect key="frame" x="87" y="387" width="426" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Skill Level" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Wnl-HQ-Ft4">
+                                <rect key="frame" x="87" y="198" width="426" height="30"/>
+                                <color key="backgroundColor" red="0.90200289048865612" green="0.90200289048865612" blue="0.90200289048865612" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="rui-iQ-pYz"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Location" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2cd-mz-NiX">
-                                <rect key="frame" x="87" y="433" width="426" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Location" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2cd-mz-NiX">
+                                <rect key="frame" x="87" y="244" width="426" height="30"/>
+                                <color key="backgroundColor" red="0.90200289048865612" green="0.90200289048865612" blue="0.90200289048865612" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="6xS-tX-kJ4"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Add Sport Here" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aXr-Wc-rdr">
+                                <rect key="frame" x="87" y="154" width="426" height="30"/>
+                                <color key="backgroundColor" red="0.90200289048865612" green="0.90200289048865612" blue="0.90200289048865612" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="HCz-Ux-wRE"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <datePicker contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="xJK-p3-Cat">
-                                <rect key="frame" x="0.0" y="113" width="600" height="216"/>
+                                <rect key="frame" x="0.0" y="292" width="600" height="216"/>
                                 <date key="date" timeIntervalSinceReferenceDate="483683309.40480697">
                                     <!--2016-04-30 04:28:29 +0000-->
                                 </date>
+                                <date key="minimumDate" timeIntervalSinceReferenceDate="-62630111092">
+                                    <!--0016-05-01 10:55:08 +0000-->
+                                </date>
+                                <date key="maximumDate" timeIntervalSinceReferenceDate="1167562800">
+                                    <!--2037-12-31 11:00:00 +0000-->
+                                </date>
                             </datePicker>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Add Sport Here" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aXr-Wc-rdr">
-                                <rect key="frame" x="87" y="343" width="426" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KuV-ZR-K4f">
+                                <rect key="frame" x="180" y="72" width="240" height="65"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="Wnl-HQ-Ft4" firstAttribute="top" secondItem="aXr-Wc-rdr" secondAttribute="bottom" constant="20" id="4GV-rS-mPP"/>
                             <constraint firstItem="Wnl-HQ-Ft4" firstAttribute="centerX" secondItem="67a-8V-odo" secondAttribute="centerX" id="7Th-cp-NH4"/>
-                            <constraint firstItem="xJK-p3-Cat" firstAttribute="top" secondItem="Qml-Rr-KCr" secondAttribute="bottom" id="VI5-Mw-7ft"/>
+                            <constraint firstItem="KuV-ZR-K4f" firstAttribute="centerX" secondItem="67a-8V-odo" secondAttribute="centerX" id="CNZ-jU-W4V"/>
+                            <constraint firstItem="2cd-mz-NiX" firstAttribute="top" secondItem="Wnl-HQ-Ft4" secondAttribute="bottom" constant="20" id="Tyq-6s-15j"/>
+                            <constraint firstItem="xJK-p3-Cat" firstAttribute="top" secondItem="2cd-mz-NiX" secondAttribute="bottom" constant="20" id="VNy-wV-4C2"/>
+                            <constraint firstItem="DhV-Za-4vS" firstAttribute="top" secondItem="xJK-p3-Cat" secondAttribute="bottom" id="e21-bV-vgx"/>
                             <constraint firstItem="aXr-Wc-rdr" firstAttribute="centerX" secondItem="67a-8V-odo" secondAttribute="centerX" id="eJ9-EN-XPT"/>
+                            <constraint firstItem="KuV-ZR-K4f" firstAttribute="top" secondItem="Qml-Rr-KCr" secondAttribute="bottom" constant="40" id="j43-GG-QWM"/>
                             <constraint firstItem="xJK-p3-Cat" firstAttribute="centerX" secondItem="67a-8V-odo" secondAttribute="centerX" id="pyc-ix-F5i"/>
                             <constraint firstItem="2cd-mz-NiX" firstAttribute="centerX" secondItem="67a-8V-odo" secondAttribute="centerX" id="yK4-4A-ndQ"/>
                         </constraints>
@@ -249,6 +303,7 @@
                     <connections>
                         <outlet property="date" destination="xJK-p3-Cat" id="EYn-4N-O9P"/>
                         <outlet property="location" destination="2cd-mz-NiX" id="dFv-SP-dMb"/>
+                        <outlet property="profile_pic" destination="KuV-ZR-K4f" id="1rO-lE-ZmP"/>
                         <outlet property="sportName" destination="aXr-Wc-rdr" id="u6q-CF-LOu"/>
                         <outlet property="time" destination="Wnl-HQ-Ft4" id="k80-rz-qcm"/>
                         <segue destination="eS6-bl-xe7" kind="show" identifier="doneSegue" id="ebt-QC-cdB"/>

@@ -34,6 +34,22 @@ class ViewController: UIViewController {
     
     @IBAction func login_button(sender: AnyObject) {
         
+        var blurEffect = UIBlurEffect(style: UIBlurEffectStyle.Dark)
+        var blurEffectView = UIVisualEffectView(effect: blurEffect)
+        blurEffectView.frame = view.bounds
+        blurEffectView.autoresizingMask = [.FlexibleWidth, .FlexibleHeight] // for supporting device rotation
+        view.addSubview(blurEffectView)
+        
+        
+        var label = UILabel(frame: CGRectMake(0, 0, 200, 30))
+        label.center = CGPointMake(187.5, 333.5)
+        label.textAlignment = NSTextAlignment.Center
+        label.text = "Loading..."
+        //label.font = label.font.fontWithSize(30)
+        label.font = UIFont(name: "HelveticaNeue-Light", size: CGFloat(22))
+        label.textColor = UIColor.whiteColor()
+        self.view.addSubview(label)
+        
         facebookLogin()
         
         

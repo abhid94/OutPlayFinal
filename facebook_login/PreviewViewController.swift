@@ -14,8 +14,15 @@ class PreviewViewController: UIViewController, UIScrollViewDelegate {
     
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var eventPic: UIImageView!
+    @IBOutlet weak var organiserPic: UIImageView!
+    @IBOutlet weak var locationLabel: UILabel!
+    @IBOutlet weak var dateLabel: UILabel!
     
     var titleString: String!
+    var locationString: String!
+    var date: String!
+    var organiser_pic: PFFile!
    // var imageFile: PFFile!
     
     
@@ -23,22 +30,15 @@ class PreviewViewController: UIViewController, UIScrollViewDelegate {
         super.viewDidLoad()
         
         self.title = self.titleString
+        self.locationLabel.text = self.locationString
+        self.dateLabel.text = self.date
+        self.organiser_pic.getDataInBackgroundWithBlock{(organiser_pic, error) -> Void in
         
-        //self.imageFile.getDataInBackgroundWithBlock { (imageData, error) -> Void in
-            
-           // if error == nil {
-                
-              //  if let imageData = imageData {
-                    
-               //     let image = UIImage(data: imageData)
-               //     self.imageView.image = image
-                    
-                //}
-                
-            //}
-       // }
-        
-
+        if error == nil {
+            let image = UIImage(data: organiser_pic!)
+            self.organiserPic.image = image
+        }
+        }
         // Do any additional setup after loading the view.
     }
 
