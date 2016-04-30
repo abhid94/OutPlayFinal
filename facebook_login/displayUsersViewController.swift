@@ -27,6 +27,9 @@ class displayUsersViewController: PFQueryTableViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func addEventSeque(sender: AnyObject) {
+        self.performSegueWithIdentifier("createEventSeque", sender: nil);
+    }
     override func queryForTable() -> PFQuery {
         let query = PFQuery(className: "_User")
         query.cachePolicy = .CacheElseNetwork
