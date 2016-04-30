@@ -12,7 +12,12 @@ import ParseUI
 
 class BaseTableViewCell: PFTableViewCell {
 
-    @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var cellImageView: PFImageView!
+    
+    @IBOutlet weak var Sport: UILabel!
+    
+    @IBOutlet weak var Location: UILabel!
+    
+    @IBOutlet weak var Date: UILabel!
     
 }

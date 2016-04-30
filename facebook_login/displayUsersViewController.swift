@@ -11,7 +11,7 @@ import Parse
 import ParseUI
 
 class displayUsersViewController: PFQueryTableViewController {
-    
+
     
     
     override func viewDidLoad()
@@ -31,7 +31,7 @@ class displayUsersViewController: PFQueryTableViewController {
         self.performSegueWithIdentifier("createEventSeque", sender: nil);
     }
     override func queryForTable() -> PFQuery {
-        let query = PFQuery(className: "_User")
+        let query = PFQuery(className: "Event")
         query.cachePolicy = .CacheElseNetwork
         query.orderByDescending("createdAt")
         return query
@@ -40,19 +40,26 @@ class displayUsersViewController: PFQueryTableViewController {
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath, object: PFObject?) -> PFTableViewCell? {
         let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as! BaseTableViewCell
         
-        cell.titleLabel.text = object?.objectForKey("first_name") as? String
+        //cell.titleLabel.text = object?.objectForKey("Location") as? String
+    
+        let imageFile = object?.objectForKey("Organiser_Pic") as? PFFile
         
-        let imageFile = object?.objectForKey("profile_picture") as? PFFile
         
-        
-        //cell.cellImageView.image = UIImage(named: "placeholder")
-        
+        cell.cellImageView.image = UIImage(named: "placeholder")
+        cell.Location.text = object?.objectForKey("Location") as! String
+        cell.Sport.text = object?.objectForKey("Sport") as! String
+        let dateFormatter = NSDateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd HH:mm"
+        let dateString = dateFormatter.stringFromDate((object?.objectForKey("Date"))! as! NSDate)
+        cell.Date.text = dateString
+        //cell.Date.text = object?.objectForKey("Date") as! String
         cell.cellImageView.file = imageFile
         cell.cellImageView.loadInBackground()
         
         return cell
         
     }
+    
     
     override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         if indexPath.row + 1 > self.objects?.count {
@@ -64,6 +71,7 @@ class displayUsersViewController: PFQueryTableViewController {
         let height = super.tableView(tableView, heightForRowAtIndexPath: indexPath)
         return height
     }
+    
     
     override func   tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         
@@ -80,6 +88,13 @@ class displayUsersViewController: PFQueryTableViewController {
         }
         
     }
+    
+    
+  
+
+    
+    
+    
     
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {

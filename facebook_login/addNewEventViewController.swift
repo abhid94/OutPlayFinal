@@ -35,6 +35,8 @@ class addNewEventViewController: UIViewController {
     */
 
     @IBAction func doneButton(sender: AnyObject) {
+        
+        
         let Event = PFObject(className:"Event")
         
         Event["Sport"] = sportName.text
@@ -46,6 +48,31 @@ class addNewEventViewController: UIViewController {
         Event["Location"] = location.text
         
         Event["Organiser"] = PFUser.currentUser()?.username
+        
+        Event["Organiser_id"] = PFUser.currentUser()?.objectId
+        
+        //let query = PFUser.query()
+        //query?.whereKey("objectId", equalTo: (PFUser.currentUser()?.objectId)!)
+        //let user = query?.findObjectsInBackgroundWithBlock(<#T##block: PFQueryArrayResultBlock?##PFQueryArrayResultBlock?##([PFObject]?, NSError?) -> Void#>)
+        //let user = query!.findObjects()
+        
+        //Event["OrganiserPicture"] = PFUser.currentUser()
+        print(PFUser.currentUser()!.objectId!)
+        let query = PFQuery(className:"_User")
+        query.getObjectInBackgroundWithId(PFUser.currentUser()!.objectId! as String) {
+            (user: PFObject?, error: NSError?) -> Void in
+            if error == nil && user != nil {
+                print(user)
+                Event["Organiser_Pic"] = user!["profile_picture"] as! PFFile
+                Event.saveInBackgroundWithBlock{
+                    (success: Bool, error: NSError?) -> Void in
+                    
+                }
+            } else {
+                print(error)
+            }
+        }
+        
         
         Event.saveInBackgroundWithBlock{
             (success: Bool, error: NSError?) -> Void in
